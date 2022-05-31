@@ -1,0 +1,31 @@
+{
+    "name": "craw-event",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon src/index.ts",
+        "typecheck": "pnpm generate-types && tsc --noEmit",
+        "generate": "typechain --target=ethers-v5 'abi/*.json' --out-dir typechain",
+        "build": "npx tsc --build"
+    },
+    "author": "tigerOnlyATH",
+    "license": "ISC",
+    "dependencies": {
+        "@ethersproject/abi": "^5.6.2",
+        "@ethersproject/providers": "^5.6.6",
+        "@typechain/ethers-v5": "^10.0.0",
+        "@types/async": "^3.2.13",
+        "async": "^3.2.3",
+        "dotenv": "^16.0.1",
+        "ethers": "^5.6.6",
+        "typescript": "^4.6.4"
+    },
+    "devDependencies": {
+        "@tsconfig/node16": "^1.0.2",
+        "mongoose": "^6.3.4",
+        "node-cron": "^3.0.0",
+        "ts-node": "^10.7.0",
+        "typechain": "^8.0.0"
+    }
+}
